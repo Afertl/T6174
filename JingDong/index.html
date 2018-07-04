@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>京东-欢迎登录</title>
+	</head>
+	<script src="js/jquery-1.12.4.js"></script>
+	<style>
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+			body{
+				overflow-x:hidden;
+			}
+			#Top .Top-ImgTwo a:hover{
+				color: rgb(228,57,60);
+				text-decoration:underline;
+			}
+			#Warning a:hover{
+				text-decoration:underline;
+			}
+			#Top{
+				background-color: rgb(255,255,255);
+				width: 1920px;
+				height: 80px;
+			}
+			#Top .Top-ImgOne{
+				position: relative;
+				top:5px;
+				left: 442px;
+			}
+			#Top .Top-ImgTwo{
+				position: relative;
+				left: 1315px;
+				top:-24px;
+			}
+			#Top .Top-ImgTwo img{
+				position: relative;
+				left: 5px;
+			}
+			#Top .Top-ImgTwo a{
+				position: relative;
+				text-decoration: none;
+				top:-10px;
+				left: 4px;
+				color: #999;
+				font-size: 12px;
+			}
+			#Warning{
+				width: 1920px;
+				height: 40px;
+				background-color: rgb(255,248,240);
+			}
+			#Warning img{
+				position: relative;
+				left: 560px;
+				top:9px;
+			}
+			#Warning p{
+				color: rgb(153,153,153);
+				font-size: 8px;
+				position: relative;
+				top:-16px;
+				left: 585px;
+			}
+			#Warning a{
+				color: rgb(51,51,51);
+				text-decoration: none;
+			}
+			#Middle{
+				width: 1920px;
+				height: 475px;
+				background-color: rgb(190,216,191);
+			}
+			#Middle .Reminder-ImgOne{
+				position: relative;
+				left: 460px;
+			}
+			#Middle .Reminder-ImgTwo{
+				position: relative;
+				left: 1107px;
+				top: -470px;
+				width: 350px;
+				height: 35px;
+				background-color: rgb(255,248,240);
+			}
+			#Middle .Reminder-ImgTwo p{
+				font-size: 12px;
+				color: rgb(153,153,153);
+				position: relative;
+				left: 30px;
+			}
+			#Middle .Reminder-ImgTwo span img{
+				position: relative;
+				top:8px;
+				left: 30px;
+			}
+			#Middle .Reminder-ImgTwo span p{
+				position: relative;
+				top:-16px;
+				left: 55px;
+			}
+			#Sign{
+				width: 350px;
+				height: 350px;
+				background-color: rgb(255,255,255);
+				position: relative;
+				left:1107px;
+				top:-470px
+			}
+			#Sign .SignScavenging,.Account{
+				width: 173px;
+				height: 55px;
+				font-weight: 700;
+    			color: #e4393c;
+    			height: 54px;
+    			font-size: 18px;
+    			font-family: "microsoft yahei";
+    			text-align: center;
+   				border-bottom: 1px solid #f4f4f4;
+    			position: relative;
+    			background: #fff;
+    			display: block;
+			}
+			#Sign .Account a{
+				color: rgb(102,102,102);
+				text-decoration: none;
+			}
+			#Sign .SignScavenging a{
+				color: rgb(228,57,60);
+				text-decoration: none;
+			}
+			#Sign .SignScavenging a:hover{
+				color: rgb(228,57,60);
+			}
+			#Sign .Account a:hover{
+				color: rgb(228,57,60);
+				font-size: 19px;
+			}
+			#Sign .SignScavenging a{
+				position:relative;
+				top:15px;
+			}
+			#Sign .Account{
+				position:relative;
+				top:-55px;
+				left: 150px;
+			}
+			#Sign .Account a{
+				position:relative;
+				top:14px;
+			}
+			#Sign-FriendLink{
+				width: 310px;
+				height: 51px;
+				position: relative;
+				top: 240px;
+				padding-left: 20px;
+    			padding-right: 20px;
+    			line-height: 50px;
+    			border-top: 1px solid #f4f4f4;
+    			background-color: rgb(252,252,252);
+			}
+			#Sign-FriendLink .Sign-FriendLink-ImgQQ{
+				position: relative;
+				top: 13px;
+				left: -5px;
+			}
+			#Sign-FriendLink .Sign-FriendLink-ImgQQ a{
+				text-decoration: none;
+				font-size: 13px;
+				color: rgb(152,152,152);
+				position: relative;
+				top:-12px;
+				left: -3px;
+			}
+			#Sign-FriendLink .Sign-FriendLinkI{
+				color: #ccc;
+   				padding: 0 10px;
+			}
+			#Sign-FriendLink .Sign-FriendLinkI{
+				position: relative;
+				top: -50px;
+				left: 50px;
+			}
+			#Sign-FriendLink .Sign-FriendLink-ImgWeChat{
+				position: relative;
+				top: -88px;
+				left: 70px;
+			}
+			#Sign-FriendLink .Sign-FriendLink-ImgWeChat a{
+				text-decoration: none;
+				font-size: 13px;
+				color: rgb(152,152,152);
+				position: relative;
+				top:-11px;
+				left: -3px;
+			}
+			#Sign-FriendLink .Sign-FriendLink-Register{
+				position: relative;
+				left: 230px;
+				top:-136px;
+			}
+			#Sign-FriendLink .Sign-FriendLink-Register a{
+				text-decoration: none;
+				color: rgb(182,29,29);
+				position:  relative;
+				top: -12px;
+				font-size: 13px;
+			}
+			#Sign-FriendLink .Sign-FriendLink-Register a:hover{
+				color: rgb(288,57,60);
+				text-decoration:underline;
+			}
+			#Sign-FriendLink .Sign-FriendLink-ImgWeChat a:hover{
+				color: rgb(288,57,60);
+				text-decoration:underline;
+			}
+			#Sign-FriendLink .Sign-FriendLink-ImgQQ a:hover{
+				color: rgb(288,57,60);
+				text-decoration:underline;
+			}
+			#Buttom{
+				width: 990px;
+				height: 18px;
+				background-color: rgb(255,255,255);
+				position: relative;
+				top:-350px;
+				left: -580px;
+			}
+			#Buttom .Button-Links a {
+				font-size: 14px;
+				text-decoration: none;
+				color: rgb(102,102,102);
+				position: relative;
+				top: -15px;
+			}
+			#Buttom .Button-Links span{
+				position: relative;
+				top: -15px;
+			}
+			#Buttom .Button-Links a:hover{
+				color: rgb(288,57,60);
+				text-decoration:underline;
+			}
+			#Copyright{
+				width: 990px;
+				height: 18px;
+				background-color: rgb(255,255,255);
+				position: relative;
+				top:-320px;
+				left: -580px;
+			}
+			#Copyright span{
+				position: relative;
+				top:-30px;
+				left: 240px;
+				color: rgb(102,102,102);
+				font-size: 13px;
+			}
+			#OrCode{
+				width: 310px;
+				height: 250px;
+				background-color: rgb(255,255,255);
+				position: relative;
+				top:-470px;
+			}
+			#OrCode .OrCode-Img{
+				position: relative;
+				left: 80px;
+			}
+			#OrCode .OrCode-RemindOne{
+				width: 180px;
+				height: 45px;
+				background-color: rgb(255,255,255);
+				position: relative;
+				left: 65px;
+			}
+			#OrCode .OrCode-RemindOne span{
+				font-size: 12px;
+				color: rgb(102,102,102);
+				position: relative;
+				left: 15px;
+			}
+			#OrCode .OrCode-RemindOne a{
+				color: rgb(228,57,60);
+				text-decoration: none;
+			}
+			#OrCode .OrCode-RemindTwo img{
+				position: relative;
+				left: 30px;
+			}
+			#OrCode .OrCode-RemindTwo a{
+				font-size: 12px;
+				color: rgb(102,102,102);
+				position: relative;
+				left: 30px;
+				top:-11px;
+			}
+			#OrCode .OrCode-Img2{
+				position: absolute;
+            	background-image: url("img/二维码2.png");
+            	background-repeat: no-repeat;
+            	width: 148px;
+            	height: 168px;
+            	right: -7px;
+            	bottom: 100px;
+            	display: none;
+			}
+			#UserNameAndPassword{
+				position:absolute;
+				width: 350px;
+				height: 296px;
+			}
+			#UserNameAndPassword input{
+				position: relative;
+				top:25px;
+				left: 0px;
+				line-height: 18px;
+    			height: 18px;
+    			border: 0;
+    			padding: 10px 0 10px 50px;
+    			width: 254px;
+    			float: none;
+    			overflow: hidden;
+    			font-size: 14px;
+    			font-family: '\5b8b\4f53';
+			}
+			#UserNameAndPassword img{
+				position: relative;
+				left: -310px;
+				top:40px;
+			}
+			#UserNameAndPassword .ForgetPassword a{
+				color: rgb(153,153,153);
+				position: relative;
+				left: 255px;
+				top:20px;
+				font-size: 12px;
+				text-decoration: none;
+			}
+			#UserNameAndPassword .ForgetPassword a:hover{
+				color: rgb(228,57,60);
+				text-decoration: underline;
+			}
+			#UserNameAndPassword .SignIn img{
+				position: relative;
+				left: 6px;
+			}
+			
+			
+			
+	</style>
+	<body>
+		<div id="Top">
+			<div class="Top-ImgOne">
+				<img src="img/顶部欢迎.png">
+			</div>
+			<div class="Top-ImgTwo">
+				<span><img src="img/调查问卷.png" /><a href="https://surveys.jd.com/index.php?r=survey/index/sid/568245/lang/zh-Hans">登录页面，调查问卷</a></span>
+			</div>
+		</div>
+		<div id="Warning">
+			<img src="img/防骗提示.png"/>
+			<p>依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！ 新版<a href="#">《京东隐私政策》</a>已上线，将更有利于保护您的个人隐私。</p>
+		</div>
+		<div id="Middle">
+			<div class="Reminder-ImgOne">
+				<img src="img/中部.jpg"/>
+			</div>
+			<div class="Reminder-ImgTwo">
+				<span><img src="img/防骗提示.png" /><p>京东不会以任何理由要求您转账汇款，谨防诈骗。</p></span
+			</div>
+		</div>
+		<div id="Sign">
+			<div class="SignScavenging">
+				<a href="#">扫码登录</a>
+			</div>
+			<div class="Account">
+				<a href="#">账户登录</a>
+			</div>
+		<div id="Sign-FriendLink">
+			<div class="Sign-FriendLink-ImgQQ">
+			<img src="img/QQ.png"><span><a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&response_type=code&state=9501C5E5BD271AD6BA188B648FAFC32FADBFDCB9F7452CE7F6C5B85C49118F62C64C80FFFCE765CC13B4DEB70CA75354&client_id=100273020&redirect_uri=https%3A%2F%2Fqq.jd.com%2Fnew%2Fqq%2Fcallback.action%3Fview%3Dnull%26uuid%3Da32b2246cf2b4b7c9e791dec3cf75aed">QQ</a></span>
+			</div>
+			<div class="Sign-FriendLinkI">
+			<span>|</span>
+			</div>
+			<div class="Sign-FriendLink-ImgWeChat">
+			<img src="img/微信.png"><span><a href="https://open.weixin.qq.com/connect/qrconnect?appid=wx827225356b689e24&state=1778E18A6457943C33A766DDFB09F6431D32D9599DD587E9B74A650BBB92C3929C61669BBBC1CD009B50E27DF695D4C1&redirect_uri=https%3A%2F%2Fqq.jd.com%2Fnew%2Fwx%2Fcallback.action%3Fview%3Dnull%26uuid%3D05b3bb80efba4092b9ee2e04c6503bfc&response_type=code&scope=snsapi_login#wechat_redirect">微信</a></span>
+			</div>
+			<div class="Sign-FriendLink-Register">
+			<img src="img/立即注册.png"/><span><a href="https://reg.jd.com/reg/person?ReturnUrl=http%3A%2F%2Fwww.jd.com">立即注册</a></span>
+		</div>
+		<div id="OrCode">
+			<div class="OrCode-Img">
+				<img src="img/二维码1.png" />
+			</div>
+			<div id="UserNameAndPassword">
+			<div class="UserName">
+				<input type="text" placeholder="邮箱/用户名/已验证手机" />
+				<img src="img/用户名.png">
+			</div>
+			<div class="Password">
+				<input type="password" placeholder="密码" />
+				<img src="img/密码.png" />
+			</div>
+			<div class="ForgetPassword">
+				<a href="https://safe.jd.com/findPwd/index.action">忘记密码</a>
+			</div>
+			<div class="SignIn">
+				<a href="#"><img src="img/登录.png" /></a>
+			</div>
+		</div>
+			<div class="OrCode-Img2">
+			</div>
+			<div class="OrCode-RemindOne">
+				<span>打开 &nbsp;<a href="https://www.jd.com/?cu=true&utm_source=baidu-pinzhuan&utm_medium=cpc&utm_campaign=t_288551095_baidupinzhuan&utm_term=0f3d30c8dba7459bb52f2eb5eba8ac7d_0_8822914b84314ed186d3b0c69ca8353f">手机京东</a> &nbsp;扫描二维码</span>
+			</div>
+			<div class="OrCode-RemindTwo">
+				<img src="img/免输入.png"/><a>免输入</a>
+				<img src="img/更快.png"/><a>更快</a>
+				<img src="img/更安全.png"/><a>更安全</a>
+			</div>
+		</div>
+		<div id="Buttom">
+			<div class="Button-Links">
+            <a href="//www.jd.com/intro/about.aspx">关于我们</a>
+            <span>|</span>
+            <a href="//www.jd.com/contact/">联系我们</a>
+            <span>|</span>
+            <a href="//zhaopin.jd.com/">人才招聘</a>
+            <span>|</span>
+            <a href="//www.jd.com/contact/joinin.aspx">商家入驻</a>
+            <span>|</span>
+            <a href="//www.jd.com/intro/service.aspx">广告服务</a>
+            <span>|</span>
+            <a href="//app.jd.com/">手机京东</a>
+            <span>|</span>
+            <a href="//club.jd.com/links.aspx">友情链接</a>
+            <span>|</span>
+            <a href="//media.jd.com/">销售联盟</a>
+            <span>|</span>
+            <a href="//club.jd.com/" >京东社区</a>
+            <span>|</span>
+            <a href="//gongyi.jd.com" >京东公益</a>
+            <span>|</span>
+            <a href="//en.jd.com/">English Site</a>
+        </div>
+		</div>
+		<div id="Copyright">
+			<span>Copyright &copy; 2004-2018  京东JD.com 版权所有</span>
+		</div>
+	</body>
+	<script>
+		 $(function () {
+            	$("#UserNameAndPassword").hide();
+            $("#OrCode img").mouseover(function () {
+                $(".OrCode-Img").stop().animate({"left":"0"},300,function () {
+                    $(".OrCode-Img2").show();
+                });
+            }).mouseleave(function () {
+                $(".OrCode-Img2").hide();
+                $(".OrCode-Img").stop().animate({"left":"60"},300);
+            });
+            $(".Account a").click(function(){
+            	$(".OrCode-Img").hide();
+            	$(".OrCode-Img2").hide();
+            	$(".OrCode-RemindOne").hide();
+            	$(".OrCode-RemindTwo").hide();
+            	$("#UserNameAndPassword").show();
+            });
+            $(".SignScavenging a").click(function(){
+            	$(".OrCode-Img").show();
+            	$(".OrCode-RemindOne").show();
+            	$(".OrCode-RemindTwo").show();
+            	$("#UserNameAndPassword").hide();
+            });
+            $("#Sign .SignScavenging a").click(function(){
+            	$("#Sign .Account a").css("color","black");
+            	$("#Sign .SignScavenging a").css("color","red");
+            });
+            $("#Sign .Account a").click(function(){
+            	$("#Sign .Account a").css("color","red");
+            	$("#Sign .SignScavenging a").css("color","black");
+            });
+        });
+	</script>
+</html>
